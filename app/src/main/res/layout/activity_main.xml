@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/halongbay"
+      app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="40dp"
+        android:scaleType="fitXY"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/start"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/halong"/>
+
+    <TextView
+        android:id="@+id/halong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="HaLong Bay"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/camera"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/Camera"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtCamera"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gline"
+        app:layout_constraintTop_toBottomOf="@+id/halong" />
+
+    <EditText
+        android:id="@+id/edtCamera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/edt_CameraType"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/halong"
+
+        app:layout_constraintLeft_toRightOf="@+id/gline"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/settings"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:text="Settings"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/gline"
+        app:layout_constraintTop_toBottomOf="@+id/edtCamera" />
+
+    <EditText
+            android:id="@+id/edtSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edt_CameraSettings"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/edtCamera"
+        app:layout_constraintLeft_toRightOf="@+id/gline"
+        app:layout_constraintRight_toRightOf="parent"
+            android:textSize="15sp"/>
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:text = "@string/text"
+       app:layout_constraintTop_toBottomOf="@id/edtSettings"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="15sp"
+        android:justificationMode="inter_word"
+        />
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPLOAD"
+            android:backgroundTint="#919090"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DISCARD"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#919090"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintRight_toLeftOf="@+id/btnUp"
+            android:layout_marginTop="16dp"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
